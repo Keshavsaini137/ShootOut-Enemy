@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 8a6dbacb6a8992b4eb13ea473e964e5a
+timeCreated: 1520058515
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 'Oxin '
+  fontNames:
+  - 'Oxin '
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
