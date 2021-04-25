@@ -41,7 +41,7 @@ public class PauseMenu : MonoBehaviour
 		pauseBackGround.SetActive (false);
 		pauseMenu.SetActive (false);
 		Time.timeScale = 1f;
-		thePlayer.GetComponent<FirstPersonController> ().enabled = true;
+		thePlayer.GetComponent<FirstPersonController>().enabled = true;
 
 		M9.SetActive (true);
 
@@ -55,7 +55,7 @@ public class PauseMenu : MonoBehaviour
 		pauseBackGround.SetActive (true);
 		pauseMenu.SetActive (true);
 		Time.timeScale = 0f;
-		thePlayer.GetComponent<FirstPersonController> ().enabled = false;
+		thePlayer.GetComponent<FirstPersonController>().enabled = false;
 		Cursor.visible = true;
 
 		//pauseCamera.SetActive(true);

@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 64985846966553240}
   m_Layer: 0
   m_Name: EnemyTrigger
-  m_TagString: Untagged
+  m_TagString: ThePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,7 +462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1752308742240452
 GameObject:
   m_ObjectHideFlags: 1
@@ -492,9 +492,10 @@ GameObject:
   - component: {fileID: 23754908181907862}
   - component: {fileID: 111511515975301336}
   - component: {fileID: 82252281318722290}
-  - component: {fileID: 114743588984601106}
   - component: {fileID: 114769803524388884}
   - component: {fileID: 65710706909441420}
+  - component: {fileID: 114684483686886302}
+  - component: {fileID: 114352540470306066}
   m_Layer: 10
   m_Name: M9
   m_TagString: Untagged
@@ -516,11 +517,11 @@ GameObject:
   - component: {fileID: 82573559641073664}
   m_Layer: 0
   m_Name: FPSController
-  m_TagString: Untagged
+  m_TagString: ThePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1868421964886096
 GameObject:
   m_ObjectHideFlags: 1
@@ -949,7 +950,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1823015311179570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -234.9, y: 13.06, z: -322.8}
+  m_LocalPosition: {x: -232.79, y: 13.06, z: -323.2}
   m_LocalScale: {x: 2.8388383, y: 2.8388383, z: 2.8388383}
   m_Children:
   - {fileID: 4472767737417726}
@@ -1663,14 +1664,14 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1467560741686660}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!81 &81508061740024322
 AudioListener:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1096329711712654}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!81 &81820722500524590
 AudioListener:
   m_ObjectHideFlags: 1
@@ -1767,7 +1768,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2c76224bd072204418242f6314fcd734, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 212b11aae75a0a14eae25f1e7f9d4dc8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2167,7 +2168,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 065e9299ed912b4489e2884b04132b75, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ab2ecb3dac9f7e64f88c9f2a422a8b43, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2534,6 +2535,24 @@ MonoBehaviour:
   TheBullet: {fileID: 0}
   TheBlood: {fileID: 0}
   TheBloodGreen: {fileID: 0}
+--- !u!114 &114352540470306066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1759975024473840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edab43b064b1ad94d92fbe7fc56d3436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunFire: {fileID: 114684483686886302}
+  ReloadSound: {fileID: 82853053491125622}
+  CrossObject: {fileID: 0}
+  MechanicsObject: {fileID: 1137336817820404}
+  ClipCount: 0
+  ReserveCount: 0
+  ReloadAvailable: 0
 --- !u!114 &114466555532732968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2546,7 +2565,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AmmoSound: {fileID: 0}
+  ObjectiveLabel: {fileID: 0}
   ObjectiveComplete: {fileID: 0}
+--- !u!114 &114684483686886302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1759975024473840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a1b9ddf66f20a43aa5f6fdbea9f412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Flash: {fileID: 1653183151476422}
 --- !u!114 &114719141854858656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2649,18 +2681,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
---- !u!114 &114743588984601106
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1759975024473840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f6ad339c907cf489aae91007959a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Flash: {fileID: 1653183151476422}
 --- !u!114 &114769803524388884
 MonoBehaviour:
   m_ObjectHideFlags: 1
